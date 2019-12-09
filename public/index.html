@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+  <title>Grocery List</title>
+</head>
+
+<body>
+  <div id="app" class="content">
+    <div class="header">
+      <div class="title">
+        <h2>CS 260</h2>
+        <h1>Grocery List</h1>
+      </div>
+    </div>
+    <div class="add">
+      <div class="form">
+        <p> Product Name <input v-model="title"> </p>
+        <p> Price <input v-model="price"> </p>
+        <p> Quantity <input v-model="amount"> </p>
+        <button @click="upload">Add Product</button>
+      </div>
+      <h2 v-if="error">{{errorMessage}}</h2>
+    </div>
+    <p> Tax rate <input v-model="tax" v-on:input="getTotal"> %  </p>
+    <h1> Grocery List --------------- Total Cost: ${{total}} --------------- Total With Tax: ${{taxTotal}}</h1>
+    <div id="list" v-for="item in items" v-for="total in indTotal">
+      <p> <button @click="deleteItem(item)" id="deleteButton">x</button> PRODUCT <strong>{{item.title}}</strong> - PRICE $<strong>{{item.price}}</strong> - QUANTITY <strong>{{item.amount}}</strong> - Total $<strong>{{item.total}}</strong> </p>
+    </div>
+  </div>
+  <div class="footer">
+    <p> <a href="https://github.com">Github</a> Connor Pearce 2019 </p>
+  </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.7/vue.js" integrity="sha256-g+Q8DFAmG5+eyRPSydX0LY4TfjsL11XSDrIGerbbEdA=" crossorigin="anonymous"></script>
+  <script src="/script.js"></script>
+</body>
+
+</html>

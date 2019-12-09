@@ -1,0 +1,132 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  background: #fff;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* Header */
+
+.header {
+  
+  display: flex;
+  padding: 20px 100px 20px 100px;
+  background-color: #000000;
+  color: #fff;
+}
+
+.title {
+  margin-top: 10px;
+}
+
+.title h1,
+.title h2 {
+  margin: 0px;
+}
+
+.title h1 {
+  border-top: 1px solid #ffffff;
+}
+
+/* Footer */
+
+.footer {
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: fixed;
+  background-color: black;
+  color: white;
+  height: 100px;
+  padding: 20px 100px 20px 100px;
+}
+
+.footer a {
+  color: white;
+}
+
+/* Content */
+
+
+/* Admin */
+
+.heading {
+  display: flex;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.heading h2 {
+  margin: 0px;
+  margin-left: 10px;
+}
+
+.add,
+.edit {
+  display: flex;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  padding: 8px;
+  background: #333;
+  color: #fff;
+  text-align: center;
+}
+
+/* Form */
+
+input,
+textarea,
+select,
+button {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+}
+
+.form {
+  margin-right: 50px;
+}
+
+/* Uploaded images */
+
+.upload h2 {
+  margin: 0px;
+}
+
+/* Masonry */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.image-gallery {
+  column-gap: 1.5em;
+}
+
+.image {
+  display: inline;
+  width: 100%;
+}
+
+.image img {
+  width: 100%;
+}
+
+#deleteButton {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
